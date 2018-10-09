@@ -56,6 +56,6 @@ classify_polarity <- function(textColumns,algorithm="bayes",pstrong=0.5,pweak=1.
     }
   }
   
-  colnames(documents) <- c("POS","NEG","POS/NEG","BEST_FIT")
+  colnames(documents)[4] <- c("BEST_FIT") ##changed colname of col 4
   return(documents)
 }
